@@ -1,0 +1,139 @@
+package Atividade4_pc2;
+
+import java.util.Scanner;
+
+public class Sistema {
+
+    TITULO vettitulo[] = new TITULO[100];
+
+    public boolean cadastrartitulo(TITULO titulo) {
+        for (int i = 0; i < vettitulo.length; i++) {
+            if (vettitulo[i] == null) {
+                vettitulo[i] = titulo;
+                vettitulo[i].setCod(i);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public TITULO preenchertitulo(TITULO titulo) {
+        Scanner hl = new Scanner(System.in);
+        System.out.println("DADOS DO TITULO DE ELEITOR");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("INFORME O NOME");
+        titulo.setNome(hl.next());
+        System.out.println("");
+        System.out.println("INFORME A DATA DE NASCIMENTO");
+        titulo.setDatanasc(hl.next());
+        System.out.println("");
+        System.out.println("INFORME O NÚMERO DE INSCRIÇÃO");
+        titulo.setNuminsc(hl.next());
+        System.out.println("");
+        System.out.println("INFORME A ZONA");
+        titulo.setZona(hl.next());
+        System.out.println("");
+        System.out.println("INFORME A SEÇÃO");
+        titulo.setSecao(hl.next());
+        System.out.println("");
+        System.out.println("INFORME O MÚNICIPIO");
+        titulo.setMunicipio(hl.next());
+        System.out.println("");
+        System.out.println("INFORME A DATA DE EMISSÃO");
+        titulo.setDataemissao(hl.next());
+        return titulo;
+    }
+
+    public void imprimirtitulo() {
+        for (int i = 0; i < vettitulo.length; i++) {
+            if (vettitulo[i] != null) {
+                System.out.println("CÓDIGO: " + vettitulo[i].getCod());
+                System.out.println("NOME: " + vettitulo[i].getNome());
+                System.out.println("DATA DE NASCIMENTO: " + vettitulo[i].getDatanasc());
+                System.out.println("NÚMERO DE INSCRIÇÃO: " + vettitulo[i].getNuminsc());
+                System.out.println("ZONA: " + vettitulo[i].getZona());
+                System.out.println("SEÇÃO: " + vettitulo[i].getSecao());
+                System.out.println("MUNICÍPIO: " + vettitulo[i].getMunicipio());
+                System.out.println("DATA DE EMISSÃO: " + vettitulo[i].getDataemissao());
+                System.out.println("");
+                System.out.println("");
+            }
+        }
+
+    }
+
+    public void buscartitulo() {
+        Scanner hl = new Scanner(System.in);
+        System.out.println("INFORME O CÓDIGO PARA BUSCA DO TÍTULO");
+        int codtitulo = hl.nextInt();
+        for (int i = 0; i < vettitulo.length; i++) {
+            if (vettitulo[i] != null && vettitulo[i].getCod() == codtitulo) {
+                System.out.println("CÓDIGO: " + vettitulo[i].getCod());
+                System.out.println("NOME: " + vettitulo[i].getNome());
+                System.out.println("DATA DE NASCIMENTO: " + vettitulo[i].getDatanasc());
+                System.out.println("NÚMERO DE INSCRIÇÃO: " + vettitulo[i].getNuminsc());
+                System.out.println("ZONA: " + vettitulo[i].getZona());
+                System.out.println("SEÇÃO: " + vettitulo[i].getSecao());
+                System.out.println("MUNICÍPIO: " + vettitulo[i].getMunicipio());
+                System.out.println("DATA DE EMISSÃO: " + vettitulo[i].getDataemissao());
+                System.out.println("");
+                System.out.println("");
+
+            }
+        }
+
+    }
+
+    public boolean alterartitulo() {
+        Scanner hl = new Scanner(System.in);
+        System.out.println("INFORME O CÓDIGO PARA ALTERAR O TÍTULO DE ELEITOR ");
+        int codtitulo = hl.nextInt();
+        for (int i = 0; i < vettitulo.length; i++) {
+            if (vettitulo[i] != null && vettitulo[i].getCod() == codtitulo) {
+                System.out.println("DADOS DO TITULO DE ELEITOR");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("INFORME O NOME");
+                vettitulo[i].setNome(hl.next());
+                System.out.println("");
+                System.out.println("INFORME A DATA DE NASCIMENTO");
+                vettitulo[i].setDatanasc(hl.next());
+                System.out.println("");
+                System.out.println("INFORME O NÚMERO DE INSCRIÇÃO");
+                vettitulo[i].setNuminsc(hl.next());
+                System.out.println("");
+                System.out.println("INFORME A ZONA");
+                vettitulo[i].setZona(hl.next());
+                System.out.println("");
+                System.out.println("INFORME A SEÇÃO");
+                vettitulo[i].setSecao(hl.next());
+                System.out.println("");
+                System.out.println("INFORME O MÚNICIPIO");
+                vettitulo[i].setMunicipio(hl.next());
+                System.out.println("");
+                System.out.println("INFORME A DATA DE EMISSÃO");
+                vettitulo[i].setDataemissao(hl.next());
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean excluirtitulo() {
+        Scanner hl = new Scanner(System.in);
+        System.out.println("INFORME O CÓDIGO PARA EXCLUIR O CÓDIGO");
+        int codtitulo = hl.nextInt();
+        for (int i = 0; i < vettitulo.length; i++) {
+            if (vettitulo[i] != null && vettitulo[i].getCod() == codtitulo) {
+                vettitulo[i] = null;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+}
