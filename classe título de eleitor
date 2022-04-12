@@ -1,0 +1,92 @@
+package Atividade4_pc2;
+
+public class TITULO {
+
+    private String nome;
+    private String datanasc;
+    private String numinsc;
+    private String zona;
+    private String secao;
+    private String municipio;
+    private String dataemissao;
+    private int cod;
+
+    public TITULO(String nome, String datanasc, String numinsc, String zona, String secao, String municipio, String dataemissao, int cod) {
+        this.nome = nome;
+        this.datanasc = datanasc;
+        this.numinsc = numinsc;
+        this.zona = zona;
+        this.secao = secao;
+        this.municipio = municipio;
+        this.dataemissao = dataemissao;
+        this.cod = cod;
+    }
+
+    public TITULO() {
+    }
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDatanasc() {
+        return datanasc;
+    }
+
+    public void setDatanasc(String datanasc) {
+        this.datanasc = datanasc;
+    }
+
+    public String getNuminsc() {
+        return numinsc;
+    }
+
+    public void setNuminsc(String numinsc) {
+        this.numinsc = numinsc;
+    }
+
+    public String getZona() {
+        return zona;
+    }
+
+    public void setZona(String zona) {
+        this.zona = zona;
+    }
+
+    public String getSecao() {
+        return secao;
+    }
+
+    public void setSecao(String secao) {
+        this.secao = secao;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getDataemissao() {
+        return dataemissao;
+    }
+
+    public void setDataemissao(String dataemissao) {
+        this.dataemissao = dataemissao;
+    }
+
+}
